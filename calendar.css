@@ -1,0 +1,146 @@
+            .osoncalendar{
+            	 width:197px;
+            	 height:150px;
+            	 padding-top:5px;
+            	 background:#fff;
+            	 font-family:Arial,Helvetica,sans-serif;
+            	 cursor:default;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -icab-user-select: none;
+                -o-user-select: none;
+                user-select: none;	
+            }
+            .osoncalendarin{
+            	 width:176px;
+            	 height:130px;
+            	 margin:10px;
+            }
+            .osoncalendarhead{
+            	 width:176px;
+            	 height:20px;
+            	 font-size:14px;           
+            }
+
+            .osoncalendarheadyear{
+            	 float:left;
+            	 width:40px;
+            	 height:15px;
+            	 text-align:center;            
+            }
+            .osoncalendarheadmonth{
+            	 float:left;
+            	 width:69px;
+            	 height:15px;
+            	 text-align:center;            
+            }
+            .osoncalendarheadday{
+            	 float:left;
+            	 width:20px;
+            	 height:15px;
+            	 text-align:center;            
+            }
+            .osoncalendarheadah{
+            	 float:left;
+            	 width:5px;
+            	 height:15px;
+            	 text-align:center;
+            	 cursor:pointer;
+            }
+            .osoncalendarheadsp{
+            	 float:left;
+            	 width:8px;
+            	 height:15px;           
+            }
+            .osoncalendardayname{
+                width:176px;
+                height:15px;            
+            }
+            .osoncalendardaycube{
+            	 width:24px;
+            	 margin-left:1px;
+                float:left;
+                background:#dedede;
+                text-align:center;
+            	 font-size:12px;
+                font-weight:bold;
+            }
+            .osoncalendardaycubef{
+            	 margin-left:0;
+            }
+            .osoncalendardaysline{
+                margin-top:1px;
+                width:176px;
+                height:15px;
+            }
+            .osoncalendardayscube{
+            	 width:24px;
+            	 height:15px;
+            	 margin-left:1px;
+                float:left;
+                background:#f3f3f3;
+            }
+            .osoncalendardayscubea{
+            	 width:24px;
+            	 height:15px;
+            	 margin-left:1px;
+                float:left;
+                background:#cdcdd1;
+                text-align:center;
+            	 font-size:12px;
+            	 cursor:pointer;
+            }
+            .osoncalendardayscubea:hover{
+                background:#a4a5d1;
+                font-weight:bold;
+            }
+            .osoncalendardayscubeas{
+                background:#adadd1;
+                cursor:default;
+            }
+            .osoncalendardayscubef{
+            	 margin-left:0;
+            }
+            .osoncalendardays{
+                width:176px;
+                height:96px;
+
+            }    
+            .osoncalendararrowm{
+                 margin-top:3px;
+                 width:0; 
+                 height:0; 
+                 border-top: 5px solid transparent;
+                 border-bottom: 5px solid transparent; 
+                 border-right:5px solid #000;
+             } 
+            .osoncalendararrowp{
+                 margin-top:3px;
+                 width:0; 
+                 height:0; 
+                 border-top:5px solid transparent; 
+                 border-bottom:5px solid transparent; 
+                 border-left:5px solid #000;
+             } 
+            .osoncalendarmonscol{
+            	 float:left;
+            	 width:56px;
+            	 height:105px;
+                margin-right:2px;
+            	 font-size:14px;           
+            }
+            .osoncalendarmonscub{
+            	 padding-top:3px;
+            	 float:left;
+            	 width:57px;
+            	 height:20px;
+            	 font-size:11px;
+            	 cursor:pointer;         
+            }
+            .osoncalendarmonscub:hover{
+            	 width:55px;
+                background:#a4a5d1;
+            }
