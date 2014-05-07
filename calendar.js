@@ -1,47 +1,34 @@
-            var dtemp = new Date();
-            var calendar = {
-            	 year : parseInt(dtemp.getFullYear()),
-            	 month : parseInt(dtemp.getMonth())+1,
-            	 day : parseInt(dtemp.getDate()),
-            	 monthlastday: 0,
-            	 monthfirstday: 0,
-            	 timestamp : 0,
-                months : new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"),
-                monthsize : new Array (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31),                        
-            }
-        
-            function calendarleapyear(year){
-                var yearpf = parseInt(year)/4;
-                if (parseInt(yearpf)*4 ===  parseInt(year)) {
-                	  var yearph = parseInt(year)/100;
-                	  if (parseInt(yearph)*100 ===  parseInt(year) ) {
-                	      var yearpfh = parseInt(year)/400; 
-                	      if (parseInt(yearpfh)*400 ===  parseInt(year) ) {
-                	          return 1;	
-                	      } else {
-                	          return 0;
-                	      }
-                	  } else {
-                	      return 1;
-                	  }                
-                } else {
-                   return 0;
-                }
-            }
-            
-            function calendarmonthlastday(){            
-                if (calendar.month === 2) {
-	                 if ( calendarleapyear(calendar.year) === 1){
-	                     calendar.monthlastday = 29;
-	                 } else {
-	                     calendar.monthlastday = 28;
-	                 }
-	             } else {
-	                 calendar.monthlastday = calendar.monthsize[calendar.month-1];
-	             }                           
-            }
+function calendar() {
+    this.curdate = new Date();
+    this.year=parseInt(this.curdate.getFullYear());//this year
+    this.month=parseInt(this.curdate.getMonth())+1;
+    this.day=parseInt(this.curdate.getDate());
+    this.monthlastday=0;
+    this.monthfirstday=0;
+    this.timestamp=0;
+    this.months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    this.monthsize=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];         
 
+    this.leapYear= function (year){// year check leap or not ? 
+         var yearpf = parseInt(year)/4;
+         if (parseInt(yearpf)*4 !==  parseInt(year)) return 0;
+         var yearph = parseInt(year)/100;
+         if (parseInt(yearph)*100 !==  parseInt(year))return 1;
+         var yearpfh = parseInt(year)/400; 
+         if (parseInt(yearpfh)*400 ===  parseInt(year)) return 1;	
+         return 0;                	 
+     }
 
+     this.monthLastDay = function(){// give back the mont size         
+         if (this.month !== 2) return this.monthsize[inpmonth-1]; //check the month february or not. 
+         if (this.leapYear(this.year) === 1) return 29;
+         return 28;
+     }
+
+     
+}
+
+/*
             
             function calendarmakemonths(){
             	 var outhtml ="";
@@ -158,3 +145,4 @@
                 calendaryearwrite();
                 calendarmakedays();            
             }
+*/
