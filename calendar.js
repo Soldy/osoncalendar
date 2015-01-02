@@ -31,7 +31,7 @@ function osoncalendar(mainelement) {
      }
 
      this.monthLastDay = function(){// give back the mont size         
-         if (t.month !== 2) return t.monthsize[inpmonth-1]; //check the month february or not. 
+         if (t.month !== 2) return t.monthsize[t.month-1]; //check the month february or not. 
          if (t.leapYear(t.year) === 1) return 29;
          return 28;
      }
@@ -95,7 +95,7 @@ function osoncalendar(mainelement) {
 	     }
 	     t.render();
      }
-     t.dayp=function(){// date + one day
+     this.dayp=function(){// date + one day
          t.day++;
 	     if (t.day>t.monthlastday){
 	         t.day = 1;
@@ -129,23 +129,24 @@ function osoncalendar(mainelement) {
              t.render();
          }
      }
-     this.yearwrite(){
+     this.yearwrite= function (){
           document.getElementById(t.ranid+"headyear").innerHTML = t.year.toString();
      }
-     this.yearm() {
+     this.yearm = function () {
 	     t.year = t.year - 1;
          t.render();
      }
-     this.yearp() {
+     this.yearp = function () {
          t.year = t.year + 1;
 	     t.render();
      }
-     this.render(){
-         t.monthlastday();
+     this.render = function (){
+         t.monthLastDay();
+         t.makedays();
          t.daywrite();
          t.monthwrite();
          t.yearwrite();
          t.makedays();            
      }
-     var t=this;
+     var t = this;
 }
